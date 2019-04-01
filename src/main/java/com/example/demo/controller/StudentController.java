@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class StudentController {
 
     @RequestMapping("show")
-    public String show(Model model) {
+    public String show(Model model) throws Exception {
         model.addAttribute("str", "hello spring boot thymeleaf");
         Student student = new Student();
         student.setId(100);
@@ -27,6 +27,12 @@ public class StudentController {
             students.add(stu);
         }
         model.addAttribute("students", students);
+//        if (100/0==0){
+//        }
+        if (true){
+            throw  new Exception();   //自定义抛出异常
+        }
+
         return "student";
     }
 

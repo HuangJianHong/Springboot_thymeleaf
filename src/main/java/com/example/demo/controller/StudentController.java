@@ -29,9 +29,9 @@ public class StudentController {
         model.addAttribute("students", students);
 //        if (100/0==0){
 //        }
-        if (true){
-            throw  new Exception();   //自定义抛出异常
-        }
+//        if (true){
+//            throw  new Exception();   //自定义抛出异常
+//        }
 
         return "student";
     }
